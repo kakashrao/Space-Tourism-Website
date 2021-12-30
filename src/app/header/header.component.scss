@@ -1,0 +1,48 @@
+.header {
+  width: 95%;
+  height: 96px;
+  position: absolute;
+  left: 5vw;
+  top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 40%;
+  }
+
+  .tabs {
+    width: 60%;
+    height: 96px;
+    backdrop-filter: blur(10px);
+
+    ul {
+      height: 96px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0 60px 0 150px;
+      display: flex;
+      justify-content: space-evenly;
+
+      li {
+        a {
+          display: block;
+          color: #ffffff;
+          text-align: center;
+          font-family: "Barlow Condensed", sans-serif;
+          font-size: 16px;
+          letter-spacing: 2.7px;
+          padding: 0 10px;
+          text-decoration: none;
+          position: relative;
+          top: 40%;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  border-bottom: 1px solid #ffffff;
+}

@@ -1,0 +1,53 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../assets/home/background-home-desktop.jpg") no-repeat;
+
+  .explore-btn {
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20vh;
+    right: 10vw;
+
+    a {
+      display: inline-block;
+      font-family: "Bellefair", serif;
+      font-size: 20px;
+      color: #000000;
+      position: relative;
+      top: 45%;
+      left: 30%;
+    }
+  }
+
+  .intro {
+    width: 350px;
+    height: 500px;
+    color: #ffffff;
+    position: fixed;
+    top: 40vh;
+    left: 10vw;
+
+    h5 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 18px;
+      letter-spacing: 4.75px;
+    }
+
+    h1 {
+      font-family: "Bellefair", serif;
+      font-size: 100px;
+      letter-spacing: 4.75px;
+      margin: 0;
+    }
+
+    p {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 16px;
+    }
+  }
+}
