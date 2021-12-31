@@ -1,3 +1,54 @@
 <section class="destination">
   <app-header></app-header>
+
+  <div class="destination-heading">
+    <h5><span style="color: #525354">01</span> PICK YOUR DESTINATION</h5>
+    <img
+      src="../../assets/destination/image-moon.png"
+      srcset="
+        ../../assets/destination/image-moon.png,
+        ../../assets/destination/image-moon.webp
+      "
+    />
+  </div>
+
+  <div class="destination-details">
+    <div class="destination-list">
+      <ul>
+        <li class="active" (click)="onMoon()">
+          <a>MOON</a>
+        </li>
+        <li (click)="onMars()">
+          <a>MARS</a>
+        </li>
+        <li (click)="onEuropa()">
+          <a>EUROPA</a>
+        </li>
+        <li (click)="onTitan()">
+          <a>TITAN</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="destination-name">
+      <h2>MOON</h2>
+      <p>
+        See our planet as you’ve never seen it before. A perfect relaxing trip
+        away to help regain perspective and come back refreshed. While you’re
+        there, take in some history by visiting the Luna 2 and Apollo 11 landing
+        sites.
+      </p>
+    </div>
+
+    <div class="travel-details">
+      <div class="distance">
+        <h6>AVG. DISTANCE</h6>
+        <h5>384,400 KM</h5>
+      </div>
+      <div class="time">
+        <h6>EST. TRAVEL TIME</h6>
+        <h5>3 DAYS</h5>
+      </div>
+    </div>
+  </div>
 </section>

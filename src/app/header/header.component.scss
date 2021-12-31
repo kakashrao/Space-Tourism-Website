@@ -1,9 +1,9 @@
 .header {
   width: 95%;
-  height: 96px;
+  height: 80px;
   position: absolute;
   left: 5vw;
-  top: 50px;
+  top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,11 +14,11 @@
 
   .tabs {
     width: 60%;
-    height: 96px;
+    height: 80px;
     backdrop-filter: blur(10px);
 
     ul {
-      height: 96px;
+      height: 80px;
       list-style-type: none;
       margin: 0;
       padding: 0 60px 0 150px;
@@ -37,6 +37,10 @@
           text-decoration: none;
           position: relative;
           top: 40%;
+        }
+
+        a:hover {
+          cursor: pointer;
         }
       }
     }

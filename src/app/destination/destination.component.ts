@@ -12,4 +12,19 @@ export class DestinationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onMoon() {
+    console.log('On the moon!!');
+  }
+
+  onMars() {
+    console.log('On the mars!!');
+  }
+
+  onEuropa() {
+    console.log('On the europa!!');
+  }
+
+  onTitan() {
+    console.log('On the titan!!');
+  }
 }
