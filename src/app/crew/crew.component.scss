@@ -64,9 +64,12 @@
   }
 
   .crew-image {
+    text-align: center;
+    border-bottom: 1px solid #979797;
+
     img {
-      width: 400px;
-      height: 500px;
+      width: 70%;
+      max-height: 650px;
     }
   }
 }
@@ -227,5 +230,11 @@
         width: 200px;
       }
     }
+  }
+}
+
+@media screen and (min-height: 850px) {
+  .crew {
+    height: 100vh;
   }
 }

@@ -103,8 +103,13 @@
     background-position: center;
     background-size: cover;
     height: fit-content;
+    padding-top: 180px;
+    flex-direction: column-reverse;
+    justify-content: space-around;
 
     .tech-image {
+      margin-bottom: 50px;
+
       img {
         width: 100vw;
         height: 300px;
@@ -112,25 +117,30 @@
     }
 
     .tech-details {
-      top: 40vh;
-      left: 20vw;
-
-      // .tech-heading {
-      //   top: 7vh;
-      //   left: 5vw;
-      // }
+      .tech-heading {
+        text-align: center;
+        position: fixed;
+        top: 13vh;
+        left: 5vw;
+      }
 
       .tech-container {
+        margin-bottom: 50px;
         flex-direction: column;
         align-items: center;
 
         .tech-types {
+          margin-right: 0;
           flex-direction: row;
           justify-content: center;
           margin-bottom: 50px;
 
           div {
             margin-right: 30px;
+          }
+
+          div:last-child {
+            margin-right: 0;
           }
         }
 
@@ -144,5 +154,107 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tech {
+    background: url("../../assets/technology/background-technology-mobile.jpg")
+      no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .tech-details {
+      .tech-heading {
+        width: 60%;
+        left: 20%;
+      }
+
+      .tech-container {
+        width: 100vw;
+
+        .tech-description {
+          width: 80vw;
+
+          p {
+            width: 80vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tech {
+    .tech-details {
+      .tech-container {
+        .tech-description {
+          h2 {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .tech {
+    .tech-details {
+      .tech-heading {
+        width: 90%;
+        left: 5%;
+      }
+
+      .tech-container {
+        .tech-description {
+          h6 {
+            font-size: 14px;
+          }
+
+          h2 {
+            font-size: 30px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .tech {
+    .tech-details {
+      .tech-heading {
+        width: 100%;
+        left: 0;
+      }
+
+      .tech-container {
+        .tech-description {
+          h6 {
+            font-size: 12px;
+          }
+
+          h2 {
+            font-size: 24px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-height: 850px) {
+  .tech {
+    height: 100vh;
   }
 }
