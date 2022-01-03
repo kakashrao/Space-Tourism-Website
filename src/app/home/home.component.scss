@@ -5,35 +5,9 @@
   width: 100vw;
   height: 100vh;
 
-  .explore-btn {
-    width: 300px;
-    height: 300px;
-    background-color: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 50%;
-    position: fixed;
-    top: 40vh;
-    right: 10vw;
-
-    a {
-      display: inline-block;
-      font-family: "Bellefair", serif;
-      font-weight: 400;
-      font-size: 28px;
-      color: #000000;
-      position: relative;
-      top: 45%;
-      left: 30%;
-    }
-  }
-
-  .explore-btn:hover {
-    box-shadow: 0 0 0px 50px #0b0d17;
-  }
-
   .intro {
-    width: 350px;
-    height: 500px;
+    width: 500px;
+    height: auto;
     color: #ffffff;
     position: fixed;
     top: 40vh;
@@ -41,20 +15,53 @@
 
     h5 {
       font-family: "Barlow Condensed", sans-serif;
-      font-size: 18px;
+      font-weight: 400;
+      font-size: 28px;
       letter-spacing: 4.75px;
     }
 
     h1 {
       font-family: "Bellefair", serif;
-      font-size: 100px;
+      font-weight: 400;
+      font-size: 150px;
       letter-spacing: 4.75px;
-      margin: 0;
+      margin: 0 0 30px 0;
     }
 
     p {
       font-family: "Barlow Condensed", sans-serif;
-      font-size: 16px;
+      font-size: 20px;
+      letter-spacing: 1.25px;
+    }
+  }
+
+  .explore-btn {
+    position: fixed;
+    top: 40vh;
+    right: 10vw;
+
+    div {
+      width: 300px;
+      height: 300px;
+      background-color: #ffffff;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      margin: 0 auto;
+
+      a {
+        display: inline-block;
+        font-family: "Bellefair", serif;
+        font-weight: 400;
+        font-size: 28px;
+        color: #000000;
+        position: relative;
+        top: 45%;
+        left: 30%;
+      }
+    }
+
+    div:hover {
+      box-shadow: 0 0 0px 50px #0b0d17;
     }
   }
 }
@@ -65,15 +72,75 @@
     background-size: cover;
     background-position: center;
 
-    .explore-btn {
-      // position: absolute;
-      top: 60vh;
-      right: 30vw;
+    .intro {
+      width: 60vw;
+      top: 15vh;
+      left: 20vw;
+      text-align: center;
     }
 
+    .explore-btn {
+      width: 50vw;
+      height: auto;
+      top: 60vh;
+      left: 25vw;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    background: url("../../assets/home/background-home-mobile.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+
     .intro {
-      top: 20vh;
-      left: 30vw;
+      width: 90vw;
+      left: 5vw;
+    }
+  }
+}
+
+@media screen and (max-width: 613px) {
+  .home {
+    .intro {
+      h5 {
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 100px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .explore-btn {
+      width: 80vw;
+      left: 10vw;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home {
+    .intro {
+      h1 {
+        font-size: 80px;
+      }
+    }
+
+    .explore-btn {
+      div {
+        width: 200px;
+        height: 200px;
+
+        a {
+          left: 20%;
+        }
+      }
     }
   }
 }
