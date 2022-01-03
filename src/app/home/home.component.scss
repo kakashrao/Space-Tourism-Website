@@ -1,11 +1,12 @@
 .home {
+  background: url("../../assets/home/background-home-desktop.jpg") no-repeat;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
-  background: url("../../assets/home/background-home-desktop.jpg") no-repeat;
 
   .explore-btn {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background-color: #ffffff;
     border: 1px solid #ffffff;
     border-radius: 50%;
@@ -53,5 +54,14 @@
       font-family: "Barlow Condensed", sans-serif;
       font-size: 16px;
     }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+    background: url("../../assets/home/background-home-tablet.jpg") no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
   }
 }

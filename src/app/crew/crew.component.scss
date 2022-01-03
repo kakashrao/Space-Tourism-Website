@@ -2,11 +2,11 @@
   width: 100vw;
   height: 100vh;
   background: url("../../assets/crew/background-crew-desktop.jpg") no-repeat;
+  background-size: cover;
 
-  .crew-details {
-    width: 500px;
+  .crew-heading {
     position: fixed;
-    top: 23vh;
+    top: 20vh;
     left: 12vw;
 
     h5 {
@@ -14,8 +14,14 @@
       font-family: "Barlow Condensed", sans-serif;
       font-size: 18px;
       letter-spacing: 4.75px;
-      margin-bottom: 100px;
     }
+  }
+
+  .crew-details {
+    width: 500px;
+    position: fixed;
+    top: 30vh;
+    left: 12vw;
 
     h6 {
       color: #ffffff;
@@ -70,4 +76,57 @@
 
 .active {
   background-color: #ffffff;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .crew {
+    background: url("../../assets/destination/background-destination-tablet.jpg")
+      no-repeat;
+    background-size: cover;
+
+    .crew-heading {
+      top: 7vh;
+      left: 5vw;
+    }
+
+    .crew-details {
+      top: 15vh;
+      left: 15vw;
+      text-align: center;
+
+      p {
+        width: 500px;
+      }
+    }
+
+    .crew-image {
+      bottom: 0;
+      left: 25vw;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .crew {
+    background: url("../../assets/crew/background-crew-mobile.jpg") no-repeat;
+    background-size: cover;
+
+    .crew-heading {
+      top: 8vh;
+      left: 7vw;
+    }
+
+    .crew-image {
+      width: 300px;
+      height: 300px;
+      top: 20vh;
+      left: 25vw;
+      border-bottom: 1px solid #ffffff;
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
 }

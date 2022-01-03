@@ -3,6 +3,7 @@
   height: 100vh;
   background: url("../../assets/destination/background-destination-desktop.jpg")
     no-repeat;
+  background-size: cover;
 
   .destination-heading {
     position: fixed;
@@ -15,12 +16,14 @@
       font-size: 18px;
       letter-spacing: 4.75px;
     }
+  }
 
+  .destination-img {
+    position: absolute;
+    top: 40vh;
+    left: 15vw;
     img {
       width: 350px;
-      position: relative;
-      top: 30px;
-      left: 50px;
     }
   }
 
@@ -126,4 +129,94 @@
 
 .active {
   border-bottom: 1px solid #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+  .destination {
+    background: url("../../assets/destination/background-destination-tablet.jpg")
+      no-repeat;
+    background-size: cover;
+
+    .destination-heading {
+      top: 7vh;
+      left: 5vw;
+    }
+
+    .destination-img {
+      top: 20vh;
+      left: 30vw;
+    }
+
+    .destination-details {
+      top: 50vh;
+      left: 30vw;
+      text-align: center;
+
+      .destination-list {
+        ul {
+          justify-content: center;
+        }
+      }
+
+      .travel-details {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .destination {
+    background: url("../../assets/destination/background-destination-mobile.jpg")
+      no-repeat;
+    background-size: cover;
+
+    .destination-heading {
+      top: 8vh;
+      left: 7vw;
+    }
+
+    .destination-img {
+      top: 20vh;
+      left: 17vw;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    .destination-details {
+      width: 100vw;
+      top: 50vh;
+      left: 0vw;
+      text-align: center;
+
+      .destination-list {
+        ul {
+          justify-content: center;
+
+          li {
+            a {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .destination-name {
+        h2 {
+          font-size: 70px;
+        }
+
+        p {
+          font-size: 10px;
+        }
+      }
+
+      .travel-details {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
 }
