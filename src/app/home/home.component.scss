@@ -1,23 +1,25 @@
 .home {
   background: url("../../assets/home/background-home-desktop.jpg") no-repeat;
   background-size: cover;
+  background-position: center;
   width: 100vw;
   height: 100vh;
 
   .explore-btn {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     background-color: #ffffff;
     border: 1px solid #ffffff;
     border-radius: 50%;
     position: fixed;
-    bottom: 20vh;
+    top: 40vh;
     right: 10vw;
 
     a {
       display: inline-block;
       font-family: "Bellefair", serif;
-      font-size: 20px;
+      font-weight: 400;
+      font-size: 28px;
       color: #000000;
       position: relative;
       top: 45%;
@@ -61,7 +63,17 @@
   .home {
     background: url("../../assets/home/background-home-tablet.jpg") no-repeat;
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+    background-position: center;
+
+    .explore-btn {
+      // position: absolute;
+      top: 60vh;
+      right: 30vw;
+    }
+
+    .intro {
+      top: 20vh;
+      left: 30vw;
+    }
   }
 }
