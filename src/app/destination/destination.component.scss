@@ -1,39 +1,38 @@
 .destination {
-  width: 100vw;
-  height: 100vh;
   background: url("../../assets/destination/background-destination-desktop.jpg")
     no-repeat;
   background-position: center;
   background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   .destination-heading {
-    position: fixed;
-    top: 23vh;
-    left: 15vw;
+    // margin-right: 200px;
 
     h5 {
       color: #ffffff;
       font-family: "Barlow Condensed", sans-serif;
+      font-weight: 400;
       font-size: 18px;
       letter-spacing: 4.75px;
+      margin-bottom: 50px;
     }
-  }
 
-  .destination-img {
-    position: absolute;
-    top: 40vh;
-    left: 15vw;
-    img {
-      width: 350px;
+    .destination-img {
+      img {
+        width: 350px;
+      }
     }
   }
 
   .destination-details {
-    width: 400px;
-    padding: 0 0 30px 0;
-    position: fixed;
-    top: 30vh;
-    right: 8vw;
+    width: 500px;
+    height: auto;
+    padding: 0 0 20px 0;
 
     .destination-list {
       ul {
@@ -44,9 +43,10 @@
         align-items: center;
 
         li {
-          margin-right: 20px;
+          margin-right: 40px;
           a {
             font-family: "Barlow Condensed", sans-serif;
+            font-weight: 400;
             font-size: 16px;
             letter-spacing: 2.7px;
             color: #ffffff;
@@ -56,12 +56,17 @@
             cursor: pointer;
           }
         }
+
+        li:last-child {
+          margin-right: 0;
+        }
       }
     }
 
     .destination-name {
       h2 {
         font-family: "Bellefair", serif;
+        font-weight: 400;
         font-size: 100px;
         letter-spacing: 4.75px;
         color: #ffffff;
@@ -70,8 +75,10 @@
 
       p {
         font-family: "Barlow Condensed", sans-serif;
-        font-size: 16px;
+        font-weight: 400;
+        font-size: 20px;
         letter-spacing: 1px;
+        line-height: 30px;
         color: #d0d6f9;
         margin: 0;
         padding-bottom: 35px;
@@ -80,17 +87,19 @@
     }
 
     .travel-details {
+      margin-top: 20px;
       display: flex;
       justify-content: flex-start;
       align-items: center;
 
       .distance {
         width: 150px;
-        margin-right: 30px;
+        margin-right: 60px;
 
         h6 {
           color: #d0d6f9;
           font-family: "Barlow Condensed", sans-serif;
+          font-weight: 400;
           font-size: 14px;
           letter-spacing: 2.35px;
           margin-bottom: 10px;
@@ -99,6 +108,7 @@
         h5 {
           color: #ffffff;
           font-family: "Bellefair", serif;
+          font-weight: 400;
           font-size: 28px;
           margin-top: 0;
         }
@@ -106,11 +116,11 @@
 
       .time {
         width: 150px;
-        margin-left: 30px;
 
         h6 {
           color: #d0d6f9;
           font-family: "Barlow Condensed", sans-serif;
+          font-weight: 400;
           font-size: 14px;
           letter-spacing: 2.35px;
           margin-bottom: 10px;
@@ -136,21 +146,26 @@
   .destination {
     background: url("../../assets/destination/background-destination-tablet.jpg")
       no-repeat;
+    background-position: center;
     background-size: cover;
+    height: fit-content;
+    flex-direction: column;
+    padding-top: 100px;
 
     .destination-heading {
-      top: 7vh;
-      left: 5vw;
-    }
+      margin-bottom: 50px;
+      h5 {
+        width: 90vw;
+        text-align: left;
+      }
 
-    .destination-img {
-      top: 20vh;
-      left: 30vw;
+      .destination-img {
+        text-align: center;
+      }
     }
 
     .destination-details {
-      top: 50vh;
-      left: 30vw;
+      width: 70vw;
       text-align: center;
 
       .destination-list {
@@ -166,57 +181,114 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .destination {
     background: url("../../assets/destination/background-destination-mobile.jpg")
       no-repeat;
+    background-position: center;
     background-size: cover;
 
     .destination-heading {
-      top: 8vh;
-      left: 7vw;
+      h5 {
+        text-align: center;
+      }
     }
+  }
+}
 
-    .destination-img {
-      top: 20vh;
-      left: 17vw;
+@media screen and (max-width: 500px) {
+  .destination {
+    .destination-heading {
+      .destination-img {
+        width: 90vw;
 
-      img {
-        width: 200px;
+        img {
+          width: 250px;
+        }
       }
     }
 
     .destination-details {
-      width: 100vw;
-      top: 50vh;
-      left: 0vw;
-      text-align: center;
+      width: 90vw;
 
+      .destination-name {
+        h2 {
+          font-size: 80px;
+        }
+      }
+
+      .travel-details {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        .distance {
+          margin-right: 0;
+        }
+
+        .time {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .destination {
+    .destination-details {
       .destination-list {
         ul {
-          justify-content: center;
-
           li {
-            a {
-              font-size: 10px;
-            }
+            margin-right: 20px;
           }
         }
       }
 
       .destination-name {
         h2 {
-          font-size: 70px;
+          font-size: 75px;
+          letter-spacing: 3px;
         }
 
         p {
-          font-size: 10px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 317px) {
+  .destination {
+    .destination-heading {
+      h5 {
+        font-size: 14px;
+      }
+
+      .destination-img {
+        width: 90vw;
+
+        img {
+          width: 200px;
+        }
+      }
+    }
+
+    .destination-details {
+      .destination-list {
+        ul {
+          li {
+            margin-right: 15px;
+          }
         }
       }
 
-      .travel-details {
-        flex-direction: column;
-        justify-content: center;
+      .destination-name {
+        h2 {
+          font-size: 65px;
+          letter-spacing: 3px;
+        }
       }
     }
   }

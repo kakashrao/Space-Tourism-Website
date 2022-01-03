@@ -1,28 +1,27 @@
 .crew {
-  width: 100vw;
-  height: 100vh;
   background: url("../../assets/crew/background-crew-desktop.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-
-  .crew-heading {
-    position: fixed;
-    top: 20vh;
-    left: 12vw;
-
-    h5 {
-      color: #ffffff;
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 18px;
-      letter-spacing: 4.75px;
-    }
-  }
+  width: 100vw;
+  height: 100vh;
+  padding-top: 180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   .crew-details {
     width: 500px;
-    position: fixed;
-    top: 30vh;
-    left: 12vw;
+
+    .crew-heading {
+      margin-bottom: 50px;
+
+      h5 {
+        color: #ffffff;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 18px;
+        letter-spacing: 4.75px;
+      }
+    }
 
     h6 {
       color: #ffffff;
@@ -41,10 +40,11 @@
     }
 
     p {
-      width: 350px;
       font-family: "Barlow Condensed", sans-serif;
+      font-weight: 400;
       font-size: 16px;
       letter-spacing: 1px;
+      line-height: 25px;
       color: #d0d6f9;
       margin: 0;
       padding-bottom: 35px;
@@ -64,10 +64,6 @@
   }
 
   .crew-image {
-    position: fixed;
-    bottom: 0;
-    right: 8vw;
-
     img {
       width: 400px;
       height: 500px;
@@ -79,54 +75,156 @@
   background-color: #ffffff;
 }
 
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .crew {
     background: url("../../assets/destination/background-destination-tablet.jpg")
       no-repeat;
+    background-position: center;
     background-size: cover;
-
-    .crew-heading {
-      top: 7vh;
-      left: 5vw;
-    }
+    height: fit-content;
+    padding-top: 100px;
+    flex-direction: column;
 
     .crew-details {
-      top: 15vh;
-      left: 15vw;
+      width: 90vw;
       text-align: center;
 
+      .crew-heading {
+        text-align: left;
+      }
+
       p {
-        width: 500px;
+        width: 70vw;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .crew {
+    background: url("../../assets/crew/background-crew-mobile.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column-reverse;
+    padding-top: 150px;
+
+    .crew-details {
+      width: 90vw;
+      padding-top: 50px;
+      position: relative;
+
+      .crew-heading {
+        width: 60%;
+        text-align: center;
+        position: fixed;
+        top: 10vh;
+        left: 20%;
+      }
+
+      .crew-members {
+        width: 40%;
+        position: absolute;
+        top: 0;
+        left: 30%;
       }
     }
 
     .crew-image {
-      bottom: 0;
-      left: 25vw;
+      width: 90vw;
+      height: 350px;
+      text-align: center;
+      border-bottom: 1px solid #ffffff;
+      margin-bottom: 30px;
+
+      img {
+        width: 300px;
+        height: 348px;
+      }
     }
   }
 }
 
 @media screen and (max-width: 600px) {
   .crew {
-    background: url("../../assets/crew/background-crew-mobile.jpg") no-repeat;
-    background-size: cover;
+    .crew-details {
+      h6 {
+        font-size: 24px;
+      }
 
-    .crew-heading {
-      top: 8vh;
-      left: 7vw;
+      h2 {
+        font-size: 40px;
+      }
+
+      p {
+        width: 80vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .crew {
+    .crew-details {
+      .crew-heading {
+        width: 70%;
+        left: 15%;
+      }
+
+      h6 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      .crew-members {
+        width: 50%;
+        left: 25%;
+      }
     }
 
     .crew-image {
-      width: 300px;
-      height: 300px;
-      top: 20vh;
-      left: 25vw;
-      border-bottom: 1px solid #ffffff;
-
       img {
         width: 200px;
-        height: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .crew {
+    .crew-details {
+      .crew-heading {
+        left: 15vw;
+
+        h5 {
+          font-size: 14px;
+        }
+      }
+
+      h6 {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .crew-members {
+        width: 60%;
+        left: 20%;
+      }
+    }
+
+    .crew-image {
+      img {
+        width: 200px;
       }
     }
   }

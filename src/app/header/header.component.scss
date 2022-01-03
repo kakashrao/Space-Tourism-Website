@@ -1,7 +1,7 @@
 .header {
   width: 95%;
   height: 80px;
-  position: absolute;
+  position: fixed;
   left: 5vw;
   top: 30px;
   display: flex;
@@ -79,6 +79,8 @@
         height: 60px;
 
         li {
+          height: 60px;
+
           a {
             font-size: 1.4rem;
             span {

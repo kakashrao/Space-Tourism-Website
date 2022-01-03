@@ -4,14 +4,18 @@
   background-position: center;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 180px;
 
   .intro {
     width: 500px;
     height: auto;
     color: #ffffff;
-    position: fixed;
-    top: 40vh;
-    left: 10vw;
+    // position: fixed;
+    // top: 40vh;
+    // left: 10vw;
 
     h5 {
       font-family: "Barlow Condensed", sans-serif;
@@ -36,10 +40,6 @@
   }
 
   .explore-btn {
-    position: fixed;
-    top: 40vh;
-    right: 10vw;
-
     div {
       width: 300px;
       height: 300px;
@@ -71,19 +71,17 @@
     background: url("../../assets/home/background-home-tablet.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+    height: fit-content;
+    flex-direction: column;
 
     .intro {
       width: 60vw;
-      top: 15vh;
-      left: 20vw;
       text-align: center;
+      margin-bottom: 80px;
     }
 
     .explore-btn {
-      width: 50vw;
-      height: auto;
-      top: 60vh;
-      left: 25vw;
+      margin-bottom: 100px;
     }
   }
 }
@@ -96,12 +94,11 @@
 
     .intro {
       width: 90vw;
-      left: 5vw;
     }
   }
 }
 
-@media screen and (max-width: 613px) {
+@media screen and (max-width: 500px) {
   .home {
     .intro {
       h5 {
@@ -119,12 +116,16 @@
 
     .explore-btn {
       width: 80vw;
-      left: 10vw;
+
+      div {
+        width: 200px;
+        height: 200px;
+      }
     }
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 360px) {
   .home {
     .intro {
       h1 {
@@ -134,12 +135,23 @@
 
     .explore-btn {
       div {
-        width: 200px;
-        height: 200px;
-
         a {
           left: 20%;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .home {
+    .intro {
+      h5 {
+        font-size: 12px;
+      }
+
+      h1 {
+        font-size: 60px;
       }
     }
   }
