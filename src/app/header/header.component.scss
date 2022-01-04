@@ -15,7 +15,18 @@
   .tabs {
     width: 65%;
     height: 80px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+
+    .closebtn {
+      width: 50px;
+      height: auto;
+      color: #ffffff;
+      text-align: center;
+      font-size: 60px;
+      position: fixed;
+      top: 10px;
+      right: 20px;
+    }
 
     ul {
       height: 80px;
@@ -54,6 +65,21 @@
       }
     }
   }
+
+  .icon-container {
+    display: inline-block;
+    cursor: pointer;
+
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #ffffff;
+      margin: 6px 20px;
+      transition: 0.4s;
+    }
+  }
 }
 
 .active {
@@ -72,8 +98,6 @@
     .tabs {
       width: 80%;
       height: 60px;
-      // backdrop-filter: blur(10px);
-      // background-color: #555353;
 
       ul {
         height: 60px;
@@ -96,9 +120,33 @@
 @media screen and (max-width: 768px) {
   .header {
     .tabs {
+      width: 50vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+
       ul {
-        display: none;
+        height: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+        top: 100px;
+        left: 20px;
+
+        li {
+          border-bottom: none;
+        }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    .tabs {
+      width: 70vw;
     }
   }
 }

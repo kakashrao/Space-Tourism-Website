@@ -3,7 +3,8 @@
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   padding-top: 180px;
   display: flex;
   justify-content: space-around;
@@ -84,7 +85,6 @@
       no-repeat;
     background-position: center;
     background-size: cover;
-    height: fit-content;
     padding-top: 100px;
     flex-direction: column;
 
@@ -230,11 +230,5 @@
         width: 200px;
       }
     }
-  }
-}
-
-@media screen and (min-height: 850px) {
-  .crew {
-    height: 100vh;
   }
 }

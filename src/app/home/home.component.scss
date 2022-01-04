@@ -3,7 +3,8 @@
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -73,7 +74,6 @@
     background: url("../../assets/home/background-home-tablet.jpg") no-repeat;
     background-size: cover;
     background-position: center;
-    height: fit-content;
     padding-top: 100px;
     flex-direction: column;
 
@@ -149,11 +149,5 @@
         font-size: 60px;
       }
     }
-  }
-}
-
-@media screen and (min-height: 721px) {
-  .home {
-    height: 100vh;
   }
 }

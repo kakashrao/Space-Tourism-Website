@@ -4,7 +4,8 @@
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   padding-top: 120px;
   display: flex;
   justify-content: flex-end;
@@ -102,7 +103,6 @@
       no-repeat;
     background-position: center;
     background-size: cover;
-    height: fit-content;
     padding-top: 180px;
     flex-direction: column-reverse;
     justify-content: space-around;
@@ -250,11 +250,5 @@
         }
       }
     }
-  }
-}
-
-@media screen and (min-height: 850px) {
-  .tech {
-    height: 100vh;
   }
 }

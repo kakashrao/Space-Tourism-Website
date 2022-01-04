@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,10 +7,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  srcHeight : number = 0;
+  srcWidth : number = 0;
+  openSideBar: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    this.getScreenSize();
+  }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('window:resize')
+  getScreenSize() {
+    this.srcHeight = window.innerHeight;
+    this.srcWidth = window.innerWidth;
+    // console.log(this.srcHeight, this.srcWidth);
   }
 
   onHome() {
@@ -27,5 +39,14 @@ export class HeaderComponent implements OnInit {
 
   onTech() {
     this.router.navigate(['/tech']);
+  }
+
+  toggleSidebar(event: any) {
+    this.openSideBar = true;
+    console.log(event);
+  }
+
+  closeSideBar() {
+    this.openSideBar = false;
   }
 }
