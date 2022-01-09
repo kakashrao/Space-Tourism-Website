@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 
 <section class="tech">
   <div class="tech-details">
@@ -8,29 +8,31 @@
 
     <div class="tech-container">
       <div class="tech-types">
-        <div class="active"><span>1</span></div>
-        <div><span>2</span></div>
-        <div><span>3</span></div>
+        <div
+          [class.active]="index === i"
+          *ngFor="let tech of techData; index as i"
+          (click)="changeTech(i)"
+        >
+          <span>{{ i + 1 }}</span>
+        </div>
       </div>
 
       <div class="tech-description">
         <h6>THE TERMINOLOGY...</h6>
-        <h2>LAUNCH VEHICLE</h2>
+        <h2>{{ techData[index].name }}</h2>
         <p>
-          A launch vehicle or carrier rocket is a rocket-propelled vehicle used
-          to carry a payload from Earth's surface to space, usually to Earth
-          orbit or beyond. Our WEB-X carrier rocket is the most powerful in
-          operation. Standing 150 metres tall, it's quite an awe-inspiring sight
-          on the launch pad!
+          {{ techData[index].description }}
         </p>
       </div>
     </div>
   </div>
 
-  <div class="tech-image">
-    <img
-      src="../../assets/technology/image-launch-vehicle-portrait.jpg"
-      alt="Launch Vehicle"
-    />
+  <div class="tech-image" *ngIf="srcWidth > 1024; else landscapeImg">
+    <img src="{{ techData[index].images.portrait }}" alt="Technology" />
   </div>
+  <ng-template #landscapeImg>
+    <div class="tech-image">
+      <img src="{{ techData[index].images.landscape }}" alt="Technology" />
+    </div>
+  </ng-template>
 </section>

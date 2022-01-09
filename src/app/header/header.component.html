@@ -11,25 +11,18 @@
       >×</a
     >
     <ul>
-      <li class="active" (click)="onHome()">
-        <a><span>00</span> HOME</a>
-      </li>
-      <li (click)="onDestination()">
-        <a><span>01</span> DESTINATION</a>
-      </li>
-      <li (click)="onCrew()">
-        <a><span>02</span> CREW</a>
-      </li>
-      <li (click)="onTech()">
-        <a><span>03</span> TECHNOLOGY</a>
+      <li
+        [class.active]="index === i"
+        *ngFor="let tab of tabs; index as i"
+        (click)="onChangeTabs(i)"
+      >
+        <a
+          ><span>0{{ i }}</span> {{ tab | uppercase }}</a
+        >
       </li>
     </ul>
   </div>
-  <div
-    class="icon-container"
-    *ngIf="srcWidth <= 768"
-    (click)="toggleSidebar($event)"
-  >
+  <div class="icon-container" *ngIf="srcWidth <= 768" (click)="toggleSidebar()">
     <div class="bar1"></div>
     <div class="bar2"></div>
     <div class="bar3"></div>

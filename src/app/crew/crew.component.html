@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 
 <section class="crew">
   <div class="crew-details">
@@ -6,8 +6,8 @@
       <h5><span style="color: #525354">02</span> MEET YOUR CREW</h5>
     </div>
 
-    <h6>COMMANDER</h6>
-    <h2>DOUGLAS HURLEY</h2>
+    <h6>{{ crewData[index].role | uppercase }}</h6>
+    <h2>{{ crewData[index].name | uppercase }}</h2>
     <p>
       Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
       and former NASA astronaut. He launched into space for the third time as
@@ -15,21 +15,24 @@
     </p>
 
     <div class="crew-members">
-      <div class="active"></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div
+        [class.active]="index === i"
+        *ngFor="let crew of crewData; index as i"
+        (click)="changeCrew(i)"
+      ></div>
     </div>
   </div>
 
   <div class="crew-image">
     <img
-      src="../../assets/crew/image-douglas-hurley.png"
-      srcset="
-        ../../assets/crew/image-douglas-hurley.png,
-        ../../assets/crew/image-douglas-hurley.webp
-      "
-      alt="Douglas Hurley"
+      src="{{ crewData[index].images.png }}"
+      srcset="{{
+      crewData[index].images.png
+      }},
+      {{
+      crewData[index].images.webp
+      }}"
+      alt="Crew"
     />
   </div>
 </section>

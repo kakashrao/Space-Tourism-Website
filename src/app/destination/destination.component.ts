@@ -1,4 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { SpaceTourismService } from '../space-tourism.service';
+
+interface Data {
+  name: string,
+  description: string,
+  images: {
+    png: string,
+    webp: string
+  },
+  distance: string,
+  travel: string
+}
 
 @Component({
   selector: 'app-destination',
@@ -6,25 +18,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./destination.component.scss']
 })
 export class DestinationComponent implements OnInit {
+  destinations = ['Moon', 'Mars', 'Europa', 'Titan']
+  destinationsData: Data[] = [];
+  index: number = 0;
 
-  constructor() { }
+  constructor(private _spaceTourismService: SpaceTourismService) { 
+  }
 
   ngOnInit(): void {
+    this._spaceTourismService.getData().subscribe(data => {
+      console.log(data.destinations);
+      this.destinationsData = data.destinations;
+})
   }
 
-  onMoon() {
-    console.log('On the moon!!');
-  }
-
-  onMars() {
-    console.log('On the mars!!');
-  }
-
-  onEuropa() {
-    console.log('On the europa!!');
-  }
-
-  onTitan() {
-    console.log('On the titan!!');
+  changeDestination(index: number) {
+    this.index = index;
   }
 }

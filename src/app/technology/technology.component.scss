@@ -50,6 +50,10 @@
             left: 42%;
           }
         }
+
+        div:hover {
+          cursor: pointer;
+        }
       }
 
       .tech-description {

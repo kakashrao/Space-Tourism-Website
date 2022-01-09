@@ -7,9 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  tabs: string[] = ['home', 'destination', 'crew', 'technology'] 
+  index: number = 0;
   srcHeight : number = 0;
   srcWidth : number = 0;
   openSideBar: boolean = false;
+  activeTab: string = 'home';
 
   constructor(private router: Router) { 
     this.getScreenSize();
@@ -25,25 +28,14 @@ export class HeaderComponent implements OnInit {
     // console.log(this.srcHeight, this.srcWidth);
   }
 
-  onHome() {
-    this.router.navigate(['/home']);
-  }
+onChangeTabs(index: number) {
+  this.index = index;
+  this.router.navigate([this.tabs[index]]);
+}
 
-  onDestination() {
-    this.router.navigate(['/destination']);
-  }
-
-  onCrew() {
-    this.router.navigate(['/crew']);
-  }
-
-  onTech() {
-    this.router.navigate(['/tech']);
-  }
-
-  toggleSidebar(event: any) {
+  toggleSidebar() {
     this.openSideBar = true;
-    console.log(event);
+    // console.log(event);
   }
 
   closeSideBar() {
