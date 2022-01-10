@@ -51,12 +51,17 @@
             font-weight: 400;
             font-size: 18px;
             letter-spacing: 2.7px;
-            color: #ffffff;
+            color: #d0d6f9;
             text-decoration: none;
           }
 
           a:hover {
             cursor: pointer;
+          }
+
+          .active {
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
           }
         }
       }
@@ -135,10 +140,6 @@
       }
     }
   }
-}
-
-.active {
-  border-bottom: 1px solid #ffffff;
 }
 
 @media screen and (max-width: 1024px) {

@@ -3,6 +3,11 @@
     <img src="../../assets/shared/logo.svg" alt="Logo" />
   </div>
 
+  <!-- <div class="hr-line">
+    <hr />
+  </div> -->
+  <hr *ngIf="srcWidth > 1024" />
+
   <div class="tabs" *ngIf="srcWidth > 768 || openSideBar">
     <a
       class="closebtn"
