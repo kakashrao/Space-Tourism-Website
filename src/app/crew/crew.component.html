@@ -1,3 +1,4 @@
+<app-header></app-header>
 <section class="crew">
   <div class="crew-details">
     <div class="crew-heading">
@@ -7,9 +8,7 @@
     <h6>{{ crewData[index].role | uppercase }}</h6>
     <h2>{{ crewData[index].name | uppercase }}</h2>
     <p>
-      Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
-      and former NASA astronaut. He launched into space for the third time as
-      commander of Crew Dragon Demo-2.
+      {{ crewData[index].bio | uppercase }}
     </p>
 
     <div class="crew-members">
