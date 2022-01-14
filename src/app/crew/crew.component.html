@@ -1,34 +1,38 @@
-<section class="crew">
-  <div class="crew-details">
-    <div class="crew-heading">
-      <h5><span style="color: #525354">02</span> MEET YOUR CREW</h5>
+<div class="loader" *ngIf="showSpinner; else crew"></div>
+
+<ng-template #crew>
+  <section class="crew">
+    <div class="crew-details">
+      <div class="crew-heading">
+        <h5><span style="color: #525354">02</span> MEET YOUR CREW</h5>
+      </div>
+
+      <h6>{{ crewData[index].role | uppercase }}</h6>
+      <h2>{{ crewData[index].name | uppercase }}</h2>
+      <p>
+        {{ crewData[index].bio | uppercase }}
+      </p>
+
+      <div class="crew-members">
+        <div
+          [class.active]="index === i"
+          *ngFor="let crew of crewData; index as i"
+          (click)="changeCrew(i)"
+        ></div>
+      </div>
     </div>
 
-    <h6>{{ crewData[index].role | uppercase }}</h6>
-    <h2>{{ crewData[index].name | uppercase }}</h2>
-    <p>
-      {{ crewData[index].bio | uppercase }}
-    </p>
-
-    <div class="crew-members">
-      <div
-        [class.active]="index === i"
-        *ngFor="let crew of crewData; index as i"
-        (click)="changeCrew(i)"
-      ></div>
-    </div>
-  </div>
-
-  <div class="crew-image">
-    <img
-      src="{{ crewData[index].images.png }}"
-      srcset="{{
+    <div class="crew-image">
+      <img
+        src="{{ crewData[index].images.png }}"
+        srcset="{{
       crewData[index].images.png
       }},
       {{
       crewData[index].images.webp
       }}"
-      alt="Crew"
-    />
-  </div>
-</section>
+        alt="Crew"
+      />
+    </div>
+  </section>
+</ng-template>

@@ -1,36 +1,40 @@
-<section class="tech">
-  <div class="tech-details">
-    <div class="tech-heading">
-      <h5><span style="color: #525354">03</span> SPACE LAUNCH 101</h5>
-    </div>
+<div class="loader" *ngIf="showSpinner; else tech"></div>
 
-    <div class="tech-container">
-      <div class="tech-types">
-        <div
-          [class.active]="index === i"
-          *ngFor="let tech of techData; index as i"
-          (click)="changeTech(i)"
-        >
-          <span>{{ i + 1 }}</span>
+<ng-template #tech>
+  <section class="tech">
+    <div class="tech-details">
+      <div class="tech-heading">
+        <h5><span style="color: #525354">03</span> SPACE LAUNCH 101</h5>
+      </div>
+
+      <div class="tech-container">
+        <div class="tech-types">
+          <div
+            [class.active]="index === i"
+            *ngFor="let tech of techData; index as i"
+            (click)="changeTech(i)"
+          >
+            <span>{{ i + 1 }}</span>
+          </div>
+        </div>
+
+        <div class="tech-description">
+          <h6>THE TERMINOLOGY...</h6>
+          <h2>{{ techData[index].name }}</h2>
+          <p>
+            {{ techData[index].description }}
+          </p>
         </div>
       </div>
+    </div>
 
-      <div class="tech-description">
-        <h6>THE TERMINOLOGY...</h6>
-        <h2>{{ techData[index].name }}</h2>
-        <p>
-          {{ techData[index].description }}
-        </p>
+    <div class="tech-image" *ngIf="srcWidth > 1024; else landscapeImg">
+      <img src="{{ techData[index].images.portrait }}" alt="Technology" />
+    </div>
+    <ng-template #landscapeImg>
+      <div class="tech-image">
+        <img src="{{ techData[index].images.landscape }}" alt="Technology" />
       </div>
-    </div>
-  </div>
-
-  <div class="tech-image" *ngIf="srcWidth > 1024; else landscapeImg">
-    <img src="{{ techData[index].images.portrait }}" alt="Technology" />
-  </div>
-  <ng-template #landscapeImg>
-    <div class="tech-image">
-      <img src="{{ techData[index].images.landscape }}" alt="Technology" />
-    </div>
-  </ng-template>
-</section>
+    </ng-template>
+  </section>
+</ng-template>

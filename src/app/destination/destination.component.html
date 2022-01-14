@@ -1,46 +1,50 @@
-<section class="destination">
-  <div class="destination-heading">
-    <h5><span style="color: #525354">01</span> PICK YOUR DESTINATION</h5>
-    <div class="destination-img">
-      <img
-        src="{{ destinationsData[index].images.png }}"
-        srcset="
+<div class="loader" *ngIf="showSpinner; else destination"></div>
+
+<ng-template #destination>
+  <section class="destination">
+    <div class="destination-heading">
+      <h5><span style="color: #525354">01</span> PICK YOUR DESTINATION</h5>
+      <div class="destination-img">
+        <img
+          src="{{ destinationsData[index].images.png }}"
+          srcset="
         {{ destinationsData[index].images.png }},
         {{ destinationsData[index].images.webp }}
         "
-        alt="Moon"
-      />
-    </div>
-  </div>
-
-  <div class="destination-details">
-    <div class="destination-list">
-      <ul>
-        <li
-          *ngFor="let destination of destinations; index as i"
-          (click)="changeDestination(i)"
-        >
-          <a [class.active]="index === i">{{ destination }}</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="destination-name">
-      <h2>{{ destinationsData[index].name | uppercase }}</h2>
-      <p>
-        {{ destinationsData[index].description }}
-      </p>
-    </div>
-
-    <div class="travel-details">
-      <div class="distance">
-        <h6>AVG. DISTANCE</h6>
-        <h5>{{ destinationsData[index].distance | uppercase }}</h5>
-      </div>
-      <div class="time">
-        <h6>EST. TRAVEL TIME</h6>
-        <h5>{{ destinationsData[index].travel | uppercase }}</h5>
+          alt="Moon"
+        />
       </div>
     </div>
-  </div>
-</section>
+
+    <div class="destination-details">
+      <div class="destination-list">
+        <ul>
+          <li
+            *ngFor="let destination of destinations; index as i"
+            (click)="changeDestination(i)"
+          >
+            <a [class.active]="index === i">{{ destination }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="destination-name">
+        <h2>{{ destinationsData[index].name | uppercase }}</h2>
+        <p>
+          {{ destinationsData[index].description }}
+        </p>
+      </div>
+
+      <div class="travel-details">
+        <div class="distance">
+          <h6>AVG. DISTANCE</h6>
+          <h5>{{ destinationsData[index].distance | uppercase }}</h5>
+        </div>
+        <div class="time">
+          <h6>EST. TRAVEL TIME</h6>
+          <h5>{{ destinationsData[index].travel | uppercase }}</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-template>
