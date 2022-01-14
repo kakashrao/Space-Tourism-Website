@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.showSpinner = false;
-    }, 1000);
+    }, 2000);
   }
 
   explore() {

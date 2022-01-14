@@ -112,6 +112,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .loader {
+    left: 30vw;
+  }
+
   .home {
     background: url("../../assets/home/background-home-mobile.jpg") no-repeat;
     background-size: cover;

@@ -184,6 +184,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .loader {
+    left: 30vw;
+  }
+
   .tech {
     background: url("../../assets/technology/background-technology-mobile.jpg")
       no-repeat;

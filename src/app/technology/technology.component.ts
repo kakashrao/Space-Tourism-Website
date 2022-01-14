@@ -29,7 +29,7 @@ export class TechnologyComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.showSpinner = false;
-    }, 1000);
+    }, 2000);
 
     this._spaceTourismService.getData().subscribe((data) => {
       console.log(data.technology);
